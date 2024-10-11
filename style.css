@@ -14,7 +14,7 @@ body{
 }
 .head{
   font-size: 1.3em;
-  font-family:cursive;
+  font-family:"Caveat", cursive;
 }
 .grid_container{
   display: grid;
@@ -31,7 +31,7 @@ body{
   border-width: 0;
   color: rgb(74, 0, 74);
   font-size: 2.4em;
-  font-family:cursive;
+  font-family:"Caveat", cursive;
   background-color: aliceblue;
 }
 .btn:hover{
@@ -46,12 +46,12 @@ body{
 }
 .win_msg{
   font-size: 2em;
-  font-family: cursive;
+  font-family:"Caveat", cursive;
 }
 .new_btn{
   background-color: black;
   color: aliceblue;
-  font-family: cursive;
+  font-family:"Caveat", cursive;
   border-radius: 5px;
   font-size: 1.3em;
   padding: 0.2em 0.5em 0.2em 0.5em;
