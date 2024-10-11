@@ -7,6 +7,7 @@ let new_btn = document.querySelector("#new");
 let reset_btn = document.querySelector("#reset");
 let head = document.querySelector(".head");
 let flag = 0; 
+let count=0;
 let winArr=[
   [0,1,2],
   [3,4,5],
@@ -44,10 +45,24 @@ for (let i = 0; i < 9; i++) {
       flag = 0;  
     }
     btn[i].disabled = true;
+    count++;
     checkWinner();
   });
 }
+const draw=()=>{
+  reset_btn.style.display="none";
+  container.style.opacity="50%";
+  body.style.backgroundColor="red";
+  msg_div.classList.remove("hide");
+  win_msg.innerText=`Draw`;
+  disableBtn();
+}
 const checkWinner=()=>{
+  if(count===9)
+    {
+      draw();
+      console.log("dram");
+    }
   for(let pattern of winArr)
   {
     let pos1val = btn[pattern[0]].innerText;
@@ -73,6 +88,7 @@ const displayWinner =(pos1val)=>{
 
 const newButtonOn=()=>{
   flag=0;
+  count=0;
   container.style.opacity="100%";
   msg_div.classList.add("hide");
   body.style.backgroundColor="rgb(186, 130, 238)";
@@ -82,6 +98,7 @@ const newButtonOn=()=>{
 
 const resetBtn = ()=>{
   flag=0;
+  count=0;
   enableBtn();
 }
 reset_btn.addEventListener("click",resetBtn);
